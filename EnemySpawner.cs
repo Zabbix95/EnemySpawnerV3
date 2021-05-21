@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     
     private void Start()
     {
-        PutEnemiesToList(gameObject.GetComponentsInChildren<SpawnPoint>());        
+        PutspawnPointsToList(gameObject.GetComponentsInChildren<SpawnPoint>());        
         StartCoroutine(Spawn());
     }
 
@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void PutEnemiesToList(SpawnPoint[] dots)
+    private void PutspawnPointsToList(SpawnPoint[] dots)
     {        
         _dotsSpawn.AddRange(dots);         
     }
